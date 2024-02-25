@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import ListSlice from "./ListSlice";
 
 export const store = configureStore({
-    reducer: {}
+    reducer: {
+        list: ListSlice
+    }
 })
 
 export const useAppDispatch:() => typeof store.dispatch=useDispatch
