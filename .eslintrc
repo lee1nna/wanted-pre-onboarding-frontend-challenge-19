@@ -1,6 +1,8 @@
 {
-  "extends": ["react-app", "eslint:recommended", "airbnb"],
+  "extends": ["react-app", "eslint:recommended", "airbnb", "airbnb-typescript", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
   "rules": {
+    "react/jsx-filename-extension": [0, { "extensions": [".js", ".jsx"] }],
     "no-var": "error",
     "no-multiple-empty-lines": "error",
     "no-console": ["error", {
@@ -8,6 +10,16 @@
     }],
     "eqeqeq": "error",
     "dot-notation": "error",
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/button-has-type": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
   }
 }
